@@ -1,0 +1,150 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/Roboto-Black.ttf")
+}
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto";
+}
+.main{
+    margin: 0 auto;
+    width: 1840px;
+    height: 3367px;
+    background: #2C2C54;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /*justify-content: space-between;*/
+}
+.main .head{
+    margin: 40px auto 0;
+    width: 1650px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+.main .nav{
+    padding: 0 10px;
+    width: 450px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .user_nav{
+    width: 100px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+.name{
+    margin: 0 auto;
+    width: 1650px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.name .link_l{
+    width: 1053px;
+    height: 1px;
+    background: #686DE0;
+}
+.name .link_r{
+    width: 563px;
+    height: 1px;
+    background: #686DE0;
+}
+.name .left{
+    margin: 0;
+    width: 740px;
+    color: #FFF;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.name .right{
+    margin: 0;
+    width: 550px;
+    color: #FFF;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.container{
+    margin: 0 auto;
+    width: 1650px;
+    height: 2500px;
+    display: flex;
+}
+.container .left_column{
+    margin: 0 auto;
+    width: 1075px;
+    height: 2500px;
+    background: lightgray;
+    display: flex;
+    border-right: 1px solid #272B84;;
+    flex-direction: column;
+}
+.container .right_column{
+    margin: 0 auto;
+    width: 575px;
+    height: 1670px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.forum_card_high{
+    margin: 0 auto;
+    width: 542px;
+    height: 180px;
+    border-radius: 20px;
+    background: #2C2C54;
+    box-shadow: 0 0 30px 0 rgba(146, 146, 146, 0.20);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.forum_card_high_text{
+    width: 329px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+}
+.forum_card_high_text h2{
+    margin: 20px 0 0;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 18.2px */
+}
+.forum_card_high_text p{
+    color: #FFF;
+    height: 76px;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 14.3px */
+}
+.forum_card_high_text a{
+    color: #686DE0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: none;
+}
