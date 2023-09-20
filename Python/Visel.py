@@ -2,64 +2,39 @@
 import random
 
 
-class Hangman:
-    def __init__(self, word):
-        self.word = word
-        self.guesses = []
-        self.max_attempts = 6
+class Main:
+    def __init__(self):
+        self.count_word = ['программа', 'компьютер', 'монитор']
+        self.word = random.choice(self.count_word)
+        self.choice = []
+        self.worder = []
+        self.var = 5
+        self.user = None
 
-    def play(self):
-        print("Welcome to Hangman!")
-        print("Guess the word before the hangman is complete.")
-        print("The word has", len(self.word), "letters.")
-
-        while True:
-            self.display_word()
-
-            if self.is_word_guessed():
-                print("Congratulations! You guessed the word correctly.")
-                break
-
-            if len(self.guesses) >= self.max_attempts:
-                print("Game over! You ran out of attempts.")
-                print("The word was:", self.word)
-                break
-
-            guess = self.get_guess()
-            self.guesses.append(guess)
-
-            if guess not in self.word:
-                print("Wrong guess!")
-
-    def display_word(self):
-        for letter in self.word:
-            if letter in self.guesses:
-                print(letter, end=" ")
+    def get(self):
+        print('Отгадай слово!')
+        while self.var != 0:
+            print('Осталось попыток: ', self.var)
+            for x in self.word:
+                if x in self.choice:
+                    self.worder.append(x)
+                else:
+                    self.worder.append('_')
+            print(''.join(self.worder).capitalize())
+            self.worder = []
+            self.user = input('\nВедите букву: ')
+            if self.user in self.word:
+                self.choice.append(self.user)
             else:
-                print("_", end=" ")
-        print()
+                self.var -= 1
 
-    def is_word_guessed(self):
-        for letter in self.word:
-            if letter not in self.guesses:
-                return False
-        return True
-
-    def get_guess(self):
-        while self.max_attempts != 0:
-            guess = input("Enter your guess: ").lower()
-            if len(guess) != 1:
-                print("Please enter a single letter.")
-            elif guess in self.guesses:
-                print("You already guessed that letter.")
-            elif not guess.isalpha():
-                print("Please enter a letter.")
-            else:
-                return guess
+            if len(self.word) == len(self.choice):
+                print('Вы выиграли!')
+                break
+        if self.var == 0:
+            print('Вы проиграли!')
 
 
-word_list = ["python", "hangman", "programming", "code", "computer"]
-words = random.choice(word_list)
-
-game = Hangman(words)
-game.play()
+a = Main()
+print(a.word.lower())
+a.get()
