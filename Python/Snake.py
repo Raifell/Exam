@@ -36,7 +36,7 @@ def message(text, color, px, py):
 
 
 def game():
-    game_time = 1
+    game_time = 15
     game_over = False
     game_close = False
     move = 10
