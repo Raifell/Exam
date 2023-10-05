@@ -60,7 +60,7 @@ class Terminal:
             self.lost += 1 if self.b.result == 'lost' else 0
             self.ind = input('\nContinue? Y/N: ')
 
-        print(f'\nWin: {self.win}, Lost: {self.lost}')
+        print(f'\nWin count: {self.win}, Lost count: {self.lost}')
 
 
 a = Terminal()
